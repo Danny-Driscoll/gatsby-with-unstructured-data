@@ -10,3 +10,19 @@ exports.createPages = async ({ actions: { createPage } }) => {
     context: { datafile }
   });
 };
+
+exports.onCreateWebpackConfig = ({
+  actions
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [{
+        test: /\.mjs$/,
+        type: 'javascript/auto'
+      }]
+    },
+    resolve: { 
+      extensions: ['.ts', '.tsx', '.mjs', '.js']
+    }
+  });
+}

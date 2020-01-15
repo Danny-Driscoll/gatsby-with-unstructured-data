@@ -1,6 +1,7 @@
 import React from 'react';
 import {
  createInstance,
+ OptimizelyFeature,
  OptimizelyProvider,
 } from '@optimizely/react-sdk'
 import { green, styles } from 'ansi-colors';
